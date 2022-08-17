@@ -1,5 +1,5 @@
 # I HATE this Product! Five Stars!
-##### Reducing Rating Inflation Using NLP
+### Reducing Rating Inflation Using NLP
 Author: Tom Chapman
 
 
@@ -26,27 +26,31 @@ As a reminder, the Markdown notation for an image is ![alt text](path/to/image.p
 
 
 
-# Business Understanding
+## Business Understanding
 
 Explain the project context, using at least one citation to demonstrate your domain understanding
 Consider including visualizations here as well
 
-# Data Understanding
+## Data Understanding
 
 
 
 
-# Modeling and Evaluation
+## Modeling and Evaluation
 What kind of model(s) did you use?
 How well did your final model perform, compared to the baseline?
 
 
-# Conclusion
+## Conclusion
 
 How would you recommend that your model be used?
 
-# Repository Navigation
+## Repository Navigation
 An explanation of the repository organization
 Links to the final notebook and presentation
 As a reminder, the Markdown notation for a link is [link text](/path/to/file)
 Reproduction instructions (or a link to them)
+
+
+## CITATION
+The Amazon reviews polarity dataset is constructed by Xiang Zhang (xiang.zhang@nyu.edu). It is used as a text classification benchmark in the following paper: Xiang Zhang, Junbo Zhao, Yann LeCun. Character-level Convolutional Networks for Text Classification. Advances in Neural Information Processing Systems 28 (NIPS 2015).
