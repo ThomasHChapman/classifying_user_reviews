@@ -1,4 +1,14 @@
-# Title
+# I HATE this Product! Five Stars!
+##### Reducing Rating Inflation Using NLP
+Author: Tom Chapman
+
+
+Link to Data Source:
+
+
+You'll need to unzip the train and test files once they are downloaded. By default, the notebooks look for them in the ./data folder.
+[Amazon Review Dataset](https://www.kaggle.com/datasets/kritanjalijain/amazon-reviews?select=train.csv)
+
 ## Elevator Pitch
 Immediately after the title, write a very short description of the problem you are solving, the data you are using to solve it, and how well your model solves the problem
 This should be no more than a couple of sentences
