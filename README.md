@@ -66,6 +66,7 @@ The project is split into a data cleaning & EDA notebook, and a modelling notebo
 * [README.md](README.md)
 * [preprocessing notebook](preprocessing_nb.ipynb)
 * [modeling notebobook](modeling_nb.ipynb)
+* [presentation slides](presentation_slides.pdf)
 
 
 ### Reproduction Instructions
