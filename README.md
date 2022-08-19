@@ -1,13 +1,12 @@
 ![5-stars](./images/banner.jpeg)
-
+Photo by <a href="https://unsplash.com/@towfiqu999999?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Towfiqu barbhuiya</a> on <a href="https://unsplash.com/s/photos/customer-ratings?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+  
 # I HATE this Product! Five Stars!
 ### Reducing Rating Inflation Using NLP
-Author: Tom Chapman
+Author: Tom Chapman | [email](mailto:thomas.h.chapman@gmail.com) | [linkedin](https://www.linkedin.com/in/thomashchapman/) | [github](https://github.com/ThomasHChapman)
 
 Most online marketplaces use 5-star product rating systems which are prone to rating inflation, obscuring product quality and customer sentiment. In addition to being problematic for the consumer, rating inflation makes it difficult for sellers to parse customer feedback and understand how their products are being received by the public. My project uses natural language processing to train a model on review sentiment so that it can be used to accurately classify customer reviews based on their content.
 
-You'll need to unzip the train and test files once they are downloaded. By default, the notebooks look for them in the ./data folder.
-[Amazon Review Dataset](https://www.kaggle.com/datasets/kritanjalijain/amazon-reviews?select=train.csv)
 
 ## Business Understanding
 Since their inception, online marketplaces have fundamentally shifted how consumers shop. With a near limitless number of products and services available online, it has never been easier to avoid the hassle of brick-and-mortar stores. However, identifying which products or services are high-quality has become increasingly difficult. The popularity of the 5-star rating scale has led to a number of well-documented challenges. [Harvard Business Review](https://hbr.org/2019/07/the-problems-with-5-star-rating-systems-and-how-to-fix-them) summed these challenges up nicely as follows:
@@ -55,10 +54,24 @@ From a legal perspective, a business would need written permission from each rev
 
 
 ## Repository Navigation
-An explanation of the repository organization
-Links to the final notebook and presentation
-Reproduction instructions (or a link to them)
+The project is split into a data cleaning & EDA notebook, and a modelling notebook, both of which are stored in the root of the repository. Both the [environment](environment/environment.yml) used for this project and a [pickled final model](models/final_model.pkl) are available in their respective folders.
+
+* [images](images/)
+* [environment](environment/)
+* [models](models/)
+* [working notebooks](working_notebooks/)
+* [.gitignore](.gitignore)
+* [README.md](README.md)
+* [preprocessing notebook](preprocessing_nb.ipynb)
+* [modeling notebobook](modeling_nb.ipynb)
+
+
+### Reproduction Instructions
+- Download the [environment.yml](environment/environment.yml) file, and [create a new environment](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html) using anaconda.
+- Download the [Amazon review dataset](https://www.kaggle.com/datasets/kritanjalijain/amazon-reviews?select=train.csv). By default, the notebooks look for them in the ./data folder, so be sure to save them accordingly after unzipping.
+
 
 
 ## CITATION
 The Amazon reviews polarity dataset is constructed by Xiang Zhang (xiang.zhang@nyu.edu). It is used as a text classification benchmark in the following paper: Xiang Zhang, Junbo Zhao, Yann LeCun. Character-level Convolutional Networks for Text Classification. Advances in Neural Information Processing Systems 28 (NIPS 2015).
+
