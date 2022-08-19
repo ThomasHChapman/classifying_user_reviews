@@ -1,4 +1,4 @@
-![5-stars](./images/banner.jpeg)
+![](./images/banner.jpeg)
 Photo by <a href="https://unsplash.com/@towfiqu999999?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Towfiqu barbhuiya</a> on <a href="https://unsplash.com/s/photos/customer-ratings?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
   
 # I HATE this Product! Five Stars!
@@ -23,9 +23,9 @@ The tool is also useful for sellers that want to move away from Amazon or implem
 ## Data Understanding
 The data used in this project is a publicly-available dataset hosted by Kaggle. The dataset is a subset of the Stanford Network Analysis Project (SNAP), which contains approximately 34 million Amazon reviews collected over a 13 year period. Our dataset consists of 1.8 million training samples in each polarity (positive or negative) and 200,000 validation samples in each polarity. The subset was created by labelling reviews that assigned a 1-2 star rating to the negative polarity, and reviews with a 4-5 star rating to the positive polarity. Ratings that gave 3 stars were omitted entirely.
 
-Because my goal is to train a classifier that will generalize well across different kinds of products, I chose a very large dataset that did not specialize in any one category. My hope is that this choice will drive greater accuracy on both Amazon reviews and reviews from other data sources. 
+![](images/sent_dist.png)
 
-The datset is available for download from [the source page](https://www.kaggle.com/datasets/kritanjalijain/amazon-reviews). By default, the notebooks look for them in the ./data folder of the repository, so be sure to save them correctly for reproduceability. 
+Because my goal is to train a classifier that will generalize well across different kinds of products, I chose a very large dataset that did not specialize in any one category. My hope is that this choice will drive greater accuracy on both Amazon reviews and reviews from other data sources. The datset is available for download from [the source page](https://www.kaggle.com/datasets/kritanjalijain/amazon-reviews). By default, the notebooks look for them in the ./data folder of the repository, so be sure to save them correctly for reproduceability. 
 
 
 ## Modeling Process
@@ -33,10 +33,12 @@ Given the size of my dataset, I focused on models with reasonably short training
 
 Instead of tweaking hyper parameters, I ran several iteration of each model with different combinations of tokens. Each model was evaluated based on its cross-validated accuracy score when receiving single word tokens, single words and bi-grams, single words and tri-grams, and a combination of all three tokens (referred to as allgrams in the notebooks).
 
+![](images/model_performance.png)
+
 ### Final Model Evaluation
 The logistic regression model that trained on a combination of 1-grams and 3-grams had the highest accuracy score, so I selected it as the appropriate model for this task. The model's accuracy was only very slightly (0.004%) better than a similarly-configured model that received 1-grams, 2-grams and 3-grams. However slight the margin, when combined with the fact that it requires significantly less data and therefore a shorter cleaning process, its superiority becomes clear.
 
-The model appears to generalize quite well, as it produced an accuracy score of 86.8% on completely unseen data, as compared to cross-validated accuracy of 87% on the training data. It correctly classified 88% of positive reviews and 86% of negative reviews in the test data, suggesting that it is slightly more accurate at determining positive sentiment than negative sentiment. The model avoids significant weaknesses with false positives or negatives, and significantly reduces the number of reviews that would require human review in a real-world setting. Particularly for sellers that wish to set up their own online storefront, the model’s efficiency is highly appealing.
+The model appears to generalize quite well, as it produced an accuracy score of 86.8% on completely unseen data, as compared to cross-validated accuracy of 87% on the training data. It correctly classified 88% of positive reviews and 86% of negative reviews in the test data, suggesting that it is slightly more accurate at determining positive sentiment than negative sentiment. The model avoids significant weaknesses with false positives or negatives, and significantly reduces the number of reviews that would require human review in a real-world setting. Particularly for sellers that wish to set up their own online storefront, the model's efficiency is highly appealing.
 
 The primary weakness of my model lies in its performance relative to more sophisticated NLP algorithms. There are a number of highly accurate classifiers available, and NLP as a field is advancing rapidly. However, more advanced techniques can require compute resources that may not be available to small sellers for budgetary or technical literacy reasons. My model is small enough to be deployed in a web application for easy upload/download of customer reviews and classification. It could be improved upon by a large marketplace with the financial and technical resources to tune its hyperparameters, though it is likely that an organization with those resources could implement a more sophisticated and accurate model.
 
