@@ -134,5 +134,5 @@ dmypy.json
 # Credentials
 creds/
 
-# Data Folder
-data/
+# Large Data Files
+large_data/
