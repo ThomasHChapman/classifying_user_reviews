@@ -28,23 +28,16 @@ The data used in this project is a publicly-available dataset hosted by Kaggle. 
 Because my goal is to train a classifier that will generalize well across different kinds of products, I chose a very large dataset that did not specialize in any one category. My hope is that this choice will drive greater accuracy on both Amazon reviews and reviews from other data sources. The datset is available for download from [the source page](https://www.kaggle.com/datasets/kritanjalijain/amazon-reviews). By default, the notebooks look for them in the ./data folder of the repository, so be sure to save them correctly for reproduceability. 
 
 ### Reproduction Instructions
-To replicate the environment used for this project, follow the below steps:
+To replicate the environment used for this project, follow the below steps. If you run into any trouble with this process, please reference the [Anaconda Documentation]((https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html)) for managing environments.
 1. Download the [environment.yml](environment/environment.yml) file
 2. Before launching the notebook, execute the below lines of code from the folder containing the environment.yml file:
 ```
-{
-    - conda env create -f environment.yml
-    - conda activate rc-env
-    - python -m ipykernel install --user --name rc-env --display-name rc-environment
-}
+    >>> conda env create -f environment.yml
+    >>> conda activate rc-env
+    >>> python -m ipykernel install --user --name rc-env --display-name rc-environment
+
 ```
-
-
-
-
-[create a new environment](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html) using anaconda.
-
-- Download the [Amazon review dataset](https://www.kaggle.com/datasets/kritanjalijain/amazon-reviews?select=train.csv). By default, the notebooks look for them in the ./data folder, so be sure to save them accordingly after unzipping.
+3. Download the [Amazon review dataset](https://www.kaggle.com/datasets/kritanjalijain/amazon-reviews?select=train.csv) and the [women's fashion reviews dataset](https://www.kaggle.com/datasets/nicapotato/womens-ecommerce-clothing-reviews). By default, the notebooks look for them in the ./large_data folder, so be sure to save them accordingly after unzipping.
 
 ## Modeling Process
 Given the size of my dataset, I focused on models with reasonably short training times that have strong utility in natural language processing. I iterated through multinomial naive bayes classifiers, logistic regression classifiers, and logistic regression classifiers using stochastic gradient descent. The size of the dataset made decision tree-based classifiers prohibitively time-consuming, and did not allow me to complete grid searches on my models. The grid search process quickly consumed all available memory on my local machine, and there are no free resources with larger RAM allocations than what I have available (64GB).
