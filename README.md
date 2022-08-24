@@ -23,7 +23,7 @@ The tool is also useful for sellers that want to move away from Amazon or implem
 ## Data Understanding
 The data used in this project is a publicly-available dataset hosted by Kaggle. The dataset is a subset of the Stanford Network Analysis Project (SNAP), which contains approximately 34 million Amazon reviews collected over a 13 year period. Our dataset consists of 1.8 million training samples in each polarity (positive or negative) and 200,000 validation samples in each polarity. The subset was created by labelling reviews that assigned a 1-2 star rating to the negative polarity, and reviews with a 4-5 star rating to the positive polarity. Ratings that gave 3 stars were omitted entirely.
 
-![](images/sent_dist.png)
+![](images/sent_dist_final.png)
 
 Because my goal is to train a classifier that will generalize well across different kinds of products, I chose a very large dataset that did not specialize in any one category. My hope is that this choice will drive greater accuracy on both Amazon reviews and reviews from other data sources. The datset is available for download from [the source page](https://www.kaggle.com/datasets/kritanjalijain/amazon-reviews). By default, the notebooks look for them in the ./data folder of the repository, so be sure to save them correctly for reproduceability. 
 
@@ -35,7 +35,6 @@ To replicate the environment used for this project, follow the below steps. If y
     >>> conda env create -f environment.yml
     >>> conda activate rc-env
     >>> python -m ipykernel install --user --name rc-env --display-name rc-environment
-
 ```
 3. Download the [Amazon review dataset](https://www.kaggle.com/datasets/kritanjalijain/amazon-reviews?select=train.csv) and the [women's fashion reviews dataset](https://www.kaggle.com/datasets/nicapotato/womens-ecommerce-clothing-reviews). By default, the notebooks look for them in the ./large_data folder, so be sure to save them accordingly after unzipping.
 
