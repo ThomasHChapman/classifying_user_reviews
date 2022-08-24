@@ -43,7 +43,7 @@ Given the size of my dataset, I focused on models with reasonably short training
 
 Instead of tweaking hyper parameters, I ran several iteration of each model with different combinations of tokens. Each model was evaluated based on its cross-validated accuracy score when receiving single word tokens, single words and bi-grams, single words and tri-grams, and a combination of all three tokens (referred to as allgrams in the notebooks).
 
-![](images/model_performance.png)
+![](images/model_performance_hbar.png)
 
 
 ### Final Model Evaluation
