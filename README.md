@@ -29,7 +29,7 @@ Because my goal is to train a classifier that will generalize well across differ
 
 ### Reproduction Instructions
 To replicate the environment used for this project, follow the below steps. If you run into any trouble with this process, please reference the [Anaconda Documentation]((https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html)) for managing environments.
-1. Download the [environment.yml](environment/environment.yml) file
+1. Download the [environment.yml](environment/environment.yml) file.
 2. Before launching the notebook, execute the below lines of code from the folder containing the environment.yml file:
 ```
     >>> conda env create -f environment.yml
