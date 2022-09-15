@@ -67,7 +67,7 @@ From a legal perspective, a business would need written permission from each rev
 
 
 ## Repository Navigation
-The project is split into a data cleaning & EDA notebook, and a modelling notebook, both of which are stored in the root of the repository. Both the [environment](environment/environment.yml) used for this project and a [pickled final model](models/final_model.pkl) are available in their respective folders.
+The project is split into a data cleaning & EDA notebook, and a modelling notebook, both of which are stored in the root of the repository. Both the [environment](environment/environment.yml) used for this project and the [pickled final model](models/final_model.pkl) are available in their respective folders.
 
 * [images](images/)
 * [environment](environment/)
